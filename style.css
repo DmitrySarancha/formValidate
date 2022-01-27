@@ -33,6 +33,9 @@ body {
     flex-direction: column;
     align-items: center;
 }
+.form_item {
+    position: relative;
+}
 
 .form_item-btn {
     margin-block-start: 1.3rem;
@@ -109,6 +112,30 @@ button[type='submit']:hover {
     background: #4040c454;
     box-shadow: 0 0 7px 2px #4040c4b7;
     color: #d3d1d1;
+}
+
+.eye {
+    position: absolute;
+    cursor: pointer;
+    inline-size: 1.5rem;
+    text-align: center;
+    inset-block-start: 3.1875rem;
+    inset-inline-end: 1.25rem;
+    transition: color 300ms;
+    color: #a5a4a479;
+}
+.eye:hover {
+    color: #a5a4a4;
+}
+.fas.fa-eye-slash {
+    inline-size: 100%;
+    block-size: 100%;
+    font-size: 1rem;
+}
+.fas.fa-eye {
+    inline-size: 100%;
+    block-size: 100%;
+    font-size: 1rem;
 }
 
 .invalid label {

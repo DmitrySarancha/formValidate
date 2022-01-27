@@ -1,5 +1,8 @@
 const form = document.querySelector('.form');
+const eye = document.querySelector('.fas.fa-eye-slash');
+const password = document.querySelector('input[type="password"]');
 
+// Валидация формы...
 const validate = (e) => {
     const target = e.target;
     const elements = Array.from(target.elements);
@@ -30,5 +33,18 @@ const validate = (e) => {
         });
     }
 };
-
 form.addEventListener('submit', validate);
+
+// Осуществление видимости пароля...
+const visiblePassword = () => {
+    if (password.type === 'password') {
+        eye.classList.remove('fa-eye-slash');
+        eye.classList.add('fa-eye');
+        password.type = 'text';
+    } else {
+        eye.classList.remove('fa-eye');
+        eye.classList.add('fa-eye-slash');
+        password.type = 'password';
+    }
+};
+eye.addEventListener('click', visiblePassword);
