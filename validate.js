@@ -9,16 +9,15 @@ const validate = (e) => {
         el.parentElement.classList.remove('invalid');
     });
 
-    // email or password set?
+    // email or password re name set?
 
-    const err =
-        form.email.value || form.password.value || form.name.value
-            ? ''
-            : 'error';
+    const errEmail = form.email.value ? '' : 'error';
+    const errPassword = form.password.value ? '' : 'error';
+    const errName = form.name.value ? '' : 'error';
 
-    form.email.setCustomValidity(err);
-    form.password.setCustomValidity(err);
-    form.name.setCustomValidity(err);
+    form.email.setCustomValidity(errEmail);
+    form.password.setCustomValidity(errPassword);
+    form.name.setCustomValidity(errName);
 
     if (!target.checkValidity()) {
         e.preventDefault();
