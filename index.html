@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <form action="" class="form" novalidate>
+                <div class="form_item">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Name"
+                        autocomplete="name"
+                    />
+                    <span>Введите корректное имя!</span>
+                </div>
+                <div class="form_item">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email@gmail.com"
+                        autocomplete="email"
+                    />
+                    <span>Введите корректную почту!</span>
+                </div>
+                <div class="form_item">
+                    <label for="email">Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Password"
+                        autocomplete="current-password"
+                    />
+                    <span>Введите корректный пароль!</span>
+                </div>
+                <div class="form_item-btn">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+        <script src="validate.js"></script>
+    </body>
+</html>

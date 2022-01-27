@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+    display: grid;
+    place-items: center;
+    block-size: 100vh;
+    inline-size: 100vw;
+    background-color: #333;
+    font-size: 16px;
+}
+
+.container {
+    background-color: rgba(87, 86, 86, 0.329);
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+    inline-size: 20rem;
+    block-size: 25rem;
+    border-radius: 15px;
+}
+
+.form {
+    inline-size: 100%;
+    block-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_item-btn {
+    margin-block-start: 1.3rem;
+}
+
+label {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.3em;
+    margin-block-end: 0.5rem;
+    margin-block-start: 0.5rem;
+}
+
+input {
+    /* сброс стилей по умолчанию */
+    -webkit-appearance: none;
+    appearance: none;
+
+    font-family: inherit;
+    inline-size: 100%;
+    display: block;
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+    background-color: #4040c41a;
+    border: 3px solid #4040c4b0;
+    outline: none;
+    color: #fff;
+    transition: all 300ms;
+}
+
+input::placeholder {
+    font-style: inherit;
+    font-size: 1rem;
+}
+
+input:focus {
+    box-shadow: 0 0 7px 2px #4040c4b7;
+}
+
+span {
+    margin-block-start: 0.4rem;
+    display: block;
+    font-size: 0.9em;
+    color: #e02a2ab0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms;
+    text-align: center;
+}
+
+button[type='submit'] {
+    -webkit-appearance: none;
+    appearance: none;
+
+    display: inline-block;
+    inline-size: 100%;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0.6rem 3rem;
+    background: #4040c4b0;
+    border-radius: 10px;
+
+    color: #a5a4a4;
+    font-family: inherit;
+    line-height: 1;
+    font-size: 1em;
+    cursor: pointer;
+
+    transition: all 300ms;
+}
+
+button[type='submit']:hover {
+    background: #4040c454;
+    box-shadow: 0 0 7px 2px #4040c4b7;
+    color: #d3d1d1;
+}
+
+.invalid label {
+    color: #e02a2ab0;
+}
+
+.invalid input {
+    background-color: #e02a2a1a;
+    border: 3px solid #e02a2ab0;
+}
+
+.invalid input:focus {
+    box-shadow: 0 0 7px 2px #e02a2ab0;
+}
+
+.invalid span {
+    animation: myAnim 700ms ease-out 0s 1 normal;
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes myAnim {
+    0%,
+    100% {
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
+        transform: scale(1);
+    }
+
+    15% {
+        transform: translateX(-30px) rotate(-3deg) scale(0.8);
+    }
+
+    30% {
+        transform: translateX(15px) rotate(3deg) scale(1.3);
+    }
+
+    45% {
+        transform: translateX(-15px) rotate(-3deg) scale(0.9);
+    }
+
+    60% {
+        transform: translateX(9px) rotate(2.4deg) scale(1.3);
+    }
+
+    75% {
+        transform: translateX(-6px) rotate(-1.2deg) scale(0.9);
+    }
+}
